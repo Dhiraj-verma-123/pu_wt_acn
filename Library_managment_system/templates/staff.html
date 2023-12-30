@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Collection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesS.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Staff Collection</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Staff Members</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for member in staff %}
+                    <tr>
+                        <td>{{ member.id }}</td>
+                        <td>{{ member.name }}</td>
+                        <td>{{ member.position }}</td>
+                        <td>{{ member.department }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Staff Collection</p>
+    </footer>
+</body>
+
+</html>

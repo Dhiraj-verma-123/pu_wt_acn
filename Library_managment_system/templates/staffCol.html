@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Staff Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='staffCol.css')}}">
+</head>
+
+<body>
+    <header>
+        <h1>Add Staff Details</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="/add_staff" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required><br><br>
+
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required><br><br>
+
+                <input type="submit" value="Add Staff">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Library Staff Collection</p>
+    </footer>
+</body>
+
+</html>
